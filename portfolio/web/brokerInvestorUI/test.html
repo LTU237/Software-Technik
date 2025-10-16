@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UserInterface</title>
+    <link rel="stylesheet" href="./css/mystyle.css">
+    <script type="text/javascript" src="./js/my_script.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <h1>Gestion des Utilisateurs</h1>
+    <a href="javascript:void(0);" class="btn" onclick="showSection('investorsSection')">Investors Management</a>
+    <a href="javascript:void(0);" class="btn" onclick="showSection('brokersSection')">Brokers Management</a>
+</div>
+
+<div id="investorsSection" class="section active">
+    <h1>Investor Management</h1>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                <h2>Registriere Investor</h2>
+                <table>
+                    <tr>
+                        <td>Vorname:</td>
+                        <td><input id="regVorname" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Nachname:</td>
+                        <td><input id="regNachname" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Benutzername:</td>
+                        <td><input id="regBenutzername" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input id="regPassword" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="registerBtn" type="button">Registrieren</button></td>
+                    </tr>
+                </table>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+            <td>
+                <h2>Login Investor</h2>
+                <table>
+                    <tr>
+                        <td>Benutzername:</td>
+                        <td><input id="loginBenutzername" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input id="loginPassword" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="loginBtn" type="button">Anmelden</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>
+                            <p></p>
+                            <button id="logoutBtn" type="button">Abmelden</button>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+            <td>
+                <h2>Logindaten</h2>
+                InvestorId: <span id="outInvestorId"></span><br>
+                Benutzername: <span id="outBenutzername"></span><br>
+                AccessToken: <span id="outAccessToken"></span>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                <h2>Lösche Investor</h2>
+                <table>
+                    <tr>
+                        <td colspan="2"><button id="deleteBtn" type="button">Investor löschen</button></td>
+                    </tr>
+                </table>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+            <td>
+                <h2>Update Portfolio</h2>
+                <table>
+                    <tr>
+                        <td>Vorname:</td>
+                        <td><input id="updateVorname" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Nachname:</td>
+                        <td><input id="updateNachname" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input id="updatePassword" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="updateBtn" type="button">Investor aktualisieren</button></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div id="error" style="color: red;"></div>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                <h2>Portfolio Anlegen</h2>
+                <table>
+                    <tr>
+                        <td>Investor Id:</td>
+                        <td><input id="investorId" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Broker Id:</td>
+                        <td><input id="brokerId" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="newPortfolioBtn" type="button">Portfolio hinzufügen</button></td>
+                    </tr>
+                </table>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>
+                <hr>
+                <h2>Alle Portfolios</h2>
+                <hr>
+                <div id="outAllePortfolio"></div>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+            <td>
+                <hr>
+                <h2>Alle Brokers</h2>
+                <hr>
+                <div id="outAlleBroker"></div>
+            </td>
+            <td><div style="width: 50px;"></div></td>
+            <td>
+                <hr>
+                <h2>Alle Assets</h2>
+                <hr>
+                <div id="outAlleAsset"></div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="brokersSection" class="section">
+    <h1>Brokers Management</h1>
+    <!-- Contenu de la page de gestion des courtiers -->
+    <p>Contenu spécifique à la gestion des courtiers.</p>
+</div>
+
+</body>
+</html>
